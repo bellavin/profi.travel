@@ -1,0 +1,45 @@
+.program-day-event-partners {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: block;
+
+    img {
+      display: block;
+      max-height: 36px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__list {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      justify-items: center;
+    }
+
+    &__item {
+    }
+
+    &__link img {
+      max-height: 50px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 15px;
+  }
+}

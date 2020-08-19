@@ -1,0 +1,20 @@
+.more-btn {
+  display: inline-block;
+  padding: 8px;
+  font-size: 14px;
+  color: @black;
+  text-align: center;
+  text-decoration: none;
+  background-color: @gray;
+  transition: background 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: darken(@gray, 20%);
+  }
+
+  &:active {
+    background-color: darken(@gray, 10%);
+    color: fade(@black, 50%);
+  }
+}

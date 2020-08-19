@@ -1,0 +1,51 @@
+
+.play-btn {
+  @color: white;
+  @bg-color: @aqua;
+
+  position: relative;
+
+  display: inline-block;
+  padding-top: 13px;
+  padding-right: 63px;
+  padding-bottom: 13px;
+  padding-left: 13px;
+
+  font-size: 17px;
+  font-weight: bold;
+  color: @color;
+  text-align: center;
+  text-decoration: none;
+
+  background-color: @bg-color;
+
+  border-radius: 5px;
+
+  transition: background 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: darken(@bg-color, 5%);
+  }
+
+  &:active {
+    background-color: darken(@bg-color, 2%);
+    color: fade(@color, 50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 63px;
+    background-image: url(../img/icon/play-btn.svg);
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-left: 1px solid white;
+  }
+}

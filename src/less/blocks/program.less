@@ -1,0 +1,39 @@
+.program {
+  background-color: @black;
+
+  &__inner {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__inner {
+      padding-top: 33px;
+      padding-bottom: 33px;
+    }
+
+    &__title {
+      font-size: 38px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__inner {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    &__title {
+      font-size: 27px;
+    }
+  }
+}

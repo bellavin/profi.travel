@@ -1,0 +1,15 @@
++b.program-day-event-slider.program-day-event__slider
+  .swiper-container.js-program-day-event-slider
+    +e.H4.title Эксперты:
+    +e.UL.list.list-reset.swiper-wrapper
+      - for(let i = 0; i < 4; i++)
+        +e.LI.item.swiper-slide
+          +e.img
+            img(src="" alt="")
+          +e.txt
+            h5 Константин Рождественский
+            p Основатель и CEO рекламного агентства 19/84, Директор АКАР Урал, Преподаватель УрФУ
+    +e.pagination.swiper-pagination
+    +e.arrows
+      +e.arrow--next.swiper-button-next
+      +e.arrow--prev.swiper-button-prev

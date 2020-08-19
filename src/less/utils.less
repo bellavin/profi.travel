@@ -1,0 +1,57 @@
+.container {
+  margin: 0 auto;
+  max-width: @desktop-width;
+  min-width: @mobile-width;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 125px;
+    padding-right: 125px;
+  }
+}
+
+.list-reset {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.btn-reset {
+  padding: 0;
+  line-height: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.scroll-lock {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.js-slide {
+    transition: height 150ms, padding 100ms 100ms;
+    overflow: hidden;
+}
+
+.js-slide:not(.active) {
+  display: none;
+}

@@ -1,0 +1,105 @@
+.program-day {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+
+  margin-top: 15px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 19px;
+    padding-right: 21px;
+    padding-bottom: 17px;
+    padding-left: 21px;
+
+    color: white;
+    font-size: 18px;
+
+    background-color: #57ad37;
+    background-image: url("../img/content/program-item-title-mobile-bg.png");
+    background-size: auto 100%;
+    background-position-x: right;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+  }
+
+  &:nth-child(2) &__title {
+    background-color: #f15a23;
+    background-image: url(../img/content/program-item-title-mobile-bg-1.png), url(../img/content/program-item-title-mobile-bg-fill.png);
+    background-repeat: no-repeat, repeat;
+  }
+
+  &__inner {
+    padding: 19px;
+  }
+
+  &__event ~ &__event {
+    padding-top: 28px;
+    margin-top: 21px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      right: -38px;
+
+      display: block;
+      height: 5px;
+      background-color: @gray;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 33px;
+
+    &__title {
+      padding-top: 13px;
+      padding-right: 31px;
+      padding-bottom: 13px;
+      padding-left: 31px;
+
+      font-size: 24px;
+      background-image: url(../img/content/program-item-title-tablet-bg.png);
+
+      cursor: initial;
+    }
+
+    &:nth-child(2) &__title {
+      background-image: url(../img/content/program-item-title-tablet-bg-1.png), url(../img/content/program-item-title-mobile-bg-fill.png);
+    }
+
+    &__inner {
+      display: block;
+      padding-top: 16px;
+      padding-left: 29px;
+      padding-right: 38px;
+    }
+
+    &__inner:not(.active) {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 38px;
+
+    &__event ~ &__event {
+      padding-top: 22px;
+      margin-top: 12px;
+    }
+
+    &__title {
+      padding-top: 11px;
+      padding-bottom: 11px;
+      font-size: 28px;
+      background-image: url(../img/content/program-item-title-bg.png);
+    }
+
+    &:nth-child(2) &__title {
+      background-image: url(../img/content/program-item-title-bg-1.png), url(../img/content/program-item-title-mobile-bg-fill.png);
+    }
+  }
+}
